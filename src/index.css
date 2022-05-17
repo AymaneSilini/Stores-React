@@ -99,3 +99,10 @@ button:focus {
   color: #00BDFC;
   font-weight: bold;
 }
+
+img{
+  display:flex; 
+  align-items:center;
+  justify-content:center;
+  align-self: center;
+  }
