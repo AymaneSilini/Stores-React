@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from '@mui/material';
 import { Form, Button } from 'react-bootstrap';
+import { faHome, faPaw } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class LoginForm extends Component {
     constructor(props) {
@@ -72,7 +74,7 @@ class LoginForm extends Component {
     </div>
   
     <Button type="submit" value="Submit" style={{ backgroundColor:"#009688"}}>
-      Se connecter
+    <FontAwesomeIcon icon={faPaw}/> Se connecter
     </Button>
     </Form>
     </>
