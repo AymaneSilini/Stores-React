@@ -1,55 +1,53 @@
-import React, { Component } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, Button, Col, Row, Form, FormControl} from 'react-bootstrap';
-import { Box } from '@mui/material';
-import { Container } from '@mui/material';
+import React, {Component} from 'react'
+import {QrReader} from 'react-qr-reader'
 
 class Home extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={animals: []
-  };
-   }
+    this.state = {
+      result: 'Hold QR Code Steady and Clear to Scan'
+    }
+    this.handleScan = this.handleScan.bind(this)
+  }
 
-   
-  componentDidMount() {
-    fetch('/animals')
-            .then(res => {
-                return res.json()
-              })
-            .then(animals => { 
-                console.log(animals); 
-                this.setState({ animals })
-              });
-          }
+  handleScan(result){
+    this.setState({
+      result:data
+    })
+  }
 
+  handleError(err) {
+    console.error(err)
+  }
 
-  render(){
-  return (
-    <>
-      <br></br>
-      <br></br>
-      <Box style={{ marginLeft: '50px', marginRight: '50px' }}>
-        <Row>
-        {this.state.animals.map((animal)=>{      
-          return<>
-          <Col>
-          <Card style={{ width: '15rem'}} >
-          <Card.Img variant="top" src={animal.photo} />
-          <Card.Body>
-            <Card.Title>{animal.name}</Card.Title>
-            <Card.Text>{animal.level}</Card.Text>
-            <Card.Text>{animal.type}</Card.Text>
-            <Card.Text>$ {animal.sexe}</Card.Text>
-          </Card.Body>
-        </Card><br></br></Col></>
-   
-   })}
-        </Row>
-        </Box>
-    </>
-  );
+  render() {
+    const previewStyle = {
+      height:700,
+      width:700,
+      display:'flex',
+      "justify-content":"center"
+    }
+    
+    const camStyle = {
+      display:'flex',
+      "justify-content":"center",
+      marginTop: '-50px'
+    }
+
+    return (
+      <React.Fragment>
+      <div style={camStyle}>
+        <QrReader
+          delay={100}
+          style={previewStyle}
+          onError={this.handleError}
+          onScan={this.handleScan}
+        />
+        </div>
+        <p>{this.state.result}</p>
+        </React.Fragment>
+    )
   }
 }
-
 export default Home;
+  

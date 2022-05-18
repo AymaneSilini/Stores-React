@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from '@mui/material';
 import LoginForm from "../forms/LoginForm";
 import Fridge from '../ressources/fridgeqru.svg';
 
@@ -9,8 +8,7 @@ class Login extends Component {
     return (
     <>
     <br></br>
-    <div  style={{backgroundColor: "#009688", width: '100%',
-       height: '100%'}}>
+    <div  style={{backgroundColor: "#009688"}}>
     <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
     <div className="col-12 col-md-8 col-lg-6 col-xl-5">

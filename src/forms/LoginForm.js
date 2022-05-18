@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from '@mui/material';
 import { Form, Button } from 'react-bootstrap';
-import { faHome, faPaw } from "@fortawesome/free-solid-svg-icons";
+import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class LoginForm extends Component {
