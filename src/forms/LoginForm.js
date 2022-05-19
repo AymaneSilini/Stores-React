@@ -68,12 +68,12 @@ class LoginForm extends Component {
     </Form.Group>
 
     <div className="form-check d-flex justify-content-start mb-4">
-    <Form.Control className="form-check-input" type="checkbox" value="" id="form1Example3" name="resterconnecter"/>
-    <Form.Label className="form-check-label" htmlFor="form1Example3"> Rester connecté </Form.Label>
+      <Form.Control className="form-check-input" type="checkbox" value="" id="form1Example3" name="resterconnecter"/>
+      <Form.Label className="form-check-label" htmlFor="form1Example3"> Rester connecté </Form.Label>
     </div>
   
     <Button type="submit" value="Submit" style={{ backgroundColor:"#009688"}}>
-    <FontAwesomeIcon icon={faPaw}/> Se connecter
+      <FontAwesomeIcon icon={faPaw}/> Se connecter
     </Button>
     </Form>
     </>

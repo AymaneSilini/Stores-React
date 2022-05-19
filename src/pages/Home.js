@@ -1,53 +1,48 @@
-import React, {Component} from 'react'
-import {QrReader} from 'react-qr-reader'
+import React from 'react';
+import Html5QrcodePlugin from '../plugins/Html5QrcodePlugin.jsx'
+import ResultContainerPlugin from '../plugins/ResultContainerPlugin.jsx'
+import '../ressources/css/Home.css'
 
-class Home extends Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: 'Hold QR Code Steady and Clear to Scan'
+      decodedResults: []
     }
-    this.handleScan = this.handleScan.bind(this)
-  }
 
-  handleScan(result){
-    this.setState({
-      result:data
-    })
-  }
-
-  handleError(err) {
-    console.error(err)
+    // This binding is necessary to make `this` work in the callback.
+    this.onNewScanResult = this.onNewScanResult.bind(this);
   }
 
   render() {
-    const previewStyle = {
-      height:700,
-      width:700,
-      display:'flex',
-      "justify-content":"center"
-    }
-    
-    const camStyle = {
-      display:'flex',
-      "justify-content":"center",
-      marginTop: '-50px'
-    }
-
     return (
-      <React.Fragment>
-      <div style={camStyle}>
-        <QrReader
-          delay={100}
-          style={previewStyle}
-          onError={this.handleError}
-          onScan={this.handleScan}
-        />
-        </div>
-        <p>{this.state.result}</p>
-        </React.Fragment>
-    )
+      <div className="Home">
+        <section className="Home-section">
+          <br />
+          <br />
+          <br />
+          <Html5QrcodePlugin 
+            fps={10}
+            qrbox={250}
+            disableFlip={false}
+            qrCodeSuccessCallback={this.onNewScanResult}/>
+          <ResultContainerPlugin results={this.state.decodedResults} />
+        </section>
+      </div>
+    );
+  }
+
+  onNewScanResult(decodedText, decodedResult) {
+    console.log(
+      "Home [result]", decodedResult);
+
+    // let decodedResults = this.state.decodedResults;
+    // decodedResults.push(decodedResult);
+    this.setState((state, props) => {
+      state.decodedResults.push(decodedResult);
+      return state;
+    });
   }
 }
+
 export default Home;
-  

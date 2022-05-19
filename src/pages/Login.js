@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from "../forms/LoginForm";
-import Fridge from '../ressources/fridgeqru.svg';
+import Fridge from '../ressources/images/fridgeqru.svg';
 
 class Login extends Component {
   render() {
