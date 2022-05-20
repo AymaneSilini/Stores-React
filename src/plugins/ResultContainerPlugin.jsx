@@ -22,9 +22,7 @@ class ResultContainerTable extends React.Component {
             <table className={'Qrcode-result-table'}>
                 <thead>
                     <tr>
-                        <td>#</td>
-                        <td>Decoded Text</td>
-                        <td>Format</td>
+                        <td>Texte décodé</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,7 +32,6 @@ class ResultContainerTable extends React.Component {
                             return (<tr key={i}>
                                 <td>{i}</td>
                                 <td>{result.decodedText}</td>
-                                <td>{result.result.format.formatName}</td>
                             </tr>);
                         })
                     }
@@ -48,7 +45,7 @@ class ResultContainerPlugin extends React.Component {
     render() { 
         let results = filterResults(this.props.results);
         return (<div className='Result-container'>
-                <div className='Result-header'>Scanned results ({results.length})</div>
+                <div className='Result-header'>Vos scans précédents ({results.length})</div>
                 <div className='Result-section'>
                     <ResultContainerTable data={this.props.results} />
                 </div>

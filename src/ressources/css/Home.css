@@ -1,6 +1,9 @@
 .Home {
   text-align: center;
 }
+body {
+  background-color: #009688;
+}
 
 .Home-logo {
   height: 40vmin;
@@ -14,7 +17,7 @@
 }
 
 .Home-section {
-  background-color: #282c34;
+  background-color: #009688;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

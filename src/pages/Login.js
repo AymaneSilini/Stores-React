@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from "../forms/LoginForm";
-import Fridge from '../ressources/images/fridgeqru.svg';
+import Logo from '../ressources/images/fridgeqru.svg';
 
 class Login extends Component {
   render() {
@@ -15,7 +15,7 @@ class Login extends Component {
     <div className="card shadow-2-strong" style={{borderRadius: "1rem"}}>
     <div className="card-body p-5 text-center">
     <div className='center-image'>
-    <img src={Fridge} style={{ width:"25%", height :"25%" }}   alt="Fridge Logo" />
+    <img src={Logo} style={{ width:"25%", height :"25%" }}   alt="Fridge Logo" />
     </div>
     <div>
     <div className="card-header">Connectez-vous à l'application Stores !</div>

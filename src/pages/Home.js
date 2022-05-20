@@ -2,6 +2,7 @@ import React from 'react';
 import Html5QrcodePlugin from '../plugins/Html5QrcodePlugin.jsx'
 import ResultContainerPlugin from '../plugins/ResultContainerPlugin.jsx'
 import '../ressources/css/Home.css'
+import { Button} from 'react-bootstrap';
 
 class Home extends React.Component {
   constructor(props) {
@@ -16,6 +17,11 @@ class Home extends React.Component {
 
   render() {
     return (
+      <>
+      <Button id="btn-show-tools" variant='primary' href="/fridge">
+      Fridge
+      </Button>
+
       <div className="Home">
         <section className="Home-section">
           <br />
@@ -29,7 +35,9 @@ class Home extends React.Component {
           <ResultContainerPlugin results={this.state.decodedResults} />
         </section>
       </div>
+      </>
     );
+    
   }
 
   onNewScanResult(decodedText, decodedResult) {

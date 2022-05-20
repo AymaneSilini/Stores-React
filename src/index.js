@@ -4,6 +4,8 @@ import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import './index.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import App from './pages/App';
+import Fridge from './pages/Fridge';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +15,8 @@ root.render(
        <Routes>
         <Route path="/home" exact element={<Home />}  />
         <Route path="/" exact element={<Login/>}  />    
+        <Route path="/app" exact element={<App/>} />
+        <Route path="/fridge" exact element={<Fridge/>} />
                 
       </Routes>
     </Router>
