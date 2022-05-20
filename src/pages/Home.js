@@ -2,7 +2,7 @@ import React from 'react';
 import Html5QrcodePlugin from '../plugins/Html5QrcodePlugin.jsx'
 import ResultContainerPlugin from '../plugins/ResultContainerPlugin.jsx'
 import '../ressources/css/Home.css'
-import { Button} from 'react-bootstrap';
+import Sidebar from '../components/Sidebar';
 
 class Home extends React.Component {
   constructor(props) {
@@ -18,26 +18,24 @@ class Home extends React.Component {
   render() {
     return (
       <>
-      <Button id="btn-show-tools" variant='primary' href="/fridge">
-      Fridge
-      </Button>
+        <div id="Home" className="Home">
+          <Sidebar pageWrapId={"page-wrap"} outerContainerId={"app"} />
 
-      <div className="Home">
-        <section className="Home-section">
-          <br />
-          <br />
-          <br />
-          <Html5QrcodePlugin 
-            fps={10}
-            qrbox={250}
-            disableFlip={false}
-            qrCodeSuccessCallback={this.onNewScanResult}/>
-          <ResultContainerPlugin results={this.state.decodedResults} />
-        </section>
-      </div>
+          <section className="Home-section">
+            <br />
+            <br />
+            <br />
+            <Html5QrcodePlugin
+              fps={10}
+              qrbox={250}
+              disableFlip={false}
+              qrCodeSuccessCallback={this.onNewScanResult} />
+            <ResultContainerPlugin results={this.state.decodedResults} />
+          </section>
+        </div>
       </>
     );
-    
+
   }
 
   onNewScanResult(decodedText, decodedResult) {

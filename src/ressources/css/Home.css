@@ -1,6 +1,7 @@
 .Home {
   text-align: center;
 }
+
 body {
   background-color: #009688;
 }
@@ -38,6 +39,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -50,15 +52,15 @@ body {
 }
 
 @media(max-width: 640px) {
-	#html5qr-code-full-region {
-		width: 300px;
-	}
+  #html5qr-code-full-region {
+    width: 300px;
+  }
 }
 
 @media(min-width: 640px) {
-	#html5qr-code-full-region {
-		width: 600px;
-	}
+  #html5qr-code-full-region {
+    width: 600px;
+  }
 }
 
 .Result-container {
@@ -81,24 +83,30 @@ table {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
 th,
 td {
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
+
 th {
   text-align: left;
 }
+
 thead th {
   background-color: #55608f;
 }
+
 tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 tbody td {
   position: relative;
 }
+
 tbody td:hover:before {
   content: "";
   position: absolute;

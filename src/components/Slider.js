@@ -1,5 +1,5 @@
 import React from 'react';
-import {RangeStepInput} from 'react-range-step-input';
+import { RangeStepInput } from 'react-range-step-input';
 
 class Fridge extends React.Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class Fridge extends React.Component {
     };
     onChange(e) {
         const newVal = (e.target.value);
-        this.setState({value: newVal});
+        this.setState({ value: newVal });
     }
 };
 
