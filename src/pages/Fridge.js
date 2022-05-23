@@ -1,15 +1,16 @@
 import React from 'react';
 import Slider from '../components/Slider';
-import Sidebar from '../components/Sidebar';
+import Menu from '../components/Menu';
 import Logo from '../ressources/images/fridgeqru.svg';
+import '../ressources/css/Fridge.css';
 
 class Fridge extends React.Component {
     render() {
         return (
             <>
-                <div id="Fridge">
-                    <Sidebar pageWrapId={"page-wrap"} outerContainerId={"app"} />
-                    <div id="page-wrap">
+                <div className='Fridge'>
+                    <Menu/>
+                    <div className='main'>
                         <br></br>
                         <br></br>
                         <br></br>
@@ -24,6 +25,7 @@ class Fridge extends React.Component {
                         <div className='center-image'>
                             <Slider />
                         </div>
+                        <h1>{sessionStorage.getItem("token")}</h1>
                     </div>
                 </div>
             </>

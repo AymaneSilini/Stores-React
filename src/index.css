@@ -1,25 +1,7 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #009688;
-
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-body {
-  font-family: "PT Sans", sans-serif;
-  padding: 2rem;
-  color: #009688;
-}
-
 button {
   border: none;
   border-radius: 0.25rem;
@@ -127,4 +109,25 @@ img{
   align-items:center; 
  }
 
- 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  outline:none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;    
+}
+
+ul {
+  list-style: none;
+}
+.main {
+  padding: 1rem;
+  min-height: 200vh;
+}
